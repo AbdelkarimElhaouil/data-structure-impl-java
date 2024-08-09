@@ -37,7 +37,8 @@ public class myLinkedList {
     public void addBack(int i)
     {
         if(isEmpty()) {
-            addFront(i);
+            head = new LLnode(i);
+            System.out.println("Value" + i + " was successfully added");
         }
         else {
             LLnode helpPtr = head;
@@ -47,6 +48,7 @@ public class myLinkedList {
             helpPtr.next = new LLnode(i);
             tail = helpPtr.next;
             size++;
+            System.out.println("Value " + i + " was successfully added.");
         }
     }
     public void deleteFront()
@@ -64,6 +66,7 @@ public class myLinkedList {
             System.out.println("Empty List, Nothing to delete.");
         else if (size == 1) {
             deleteFront();
+            System.out.println("The list has only one node which has been deleted");
         }
         else {
             LLnode helpPtr = head;
@@ -72,6 +75,7 @@ public class myLinkedList {
             }
             helpPtr.next = null;
             size--;
+            System.out.println("Last node have been deleted successfully");
         }
     }
     public void delete(int ind)
@@ -254,5 +258,72 @@ public class myLinkedList {
             tmp.next = null;
         }
     }
-
+    public int findLargest(){
+        int largest = 0;
+        if(isEmpty())
+            System.out.println("Cannot Find Largest Id, empty linked list.");
+        else {
+            largest = head.id;
+            LLnode helpPtr = head.next;
+            while (helpPtr != null) {
+                if (helpPtr.id > largest)
+                    largest = helpPtr.id;
+            helpPtr = helpPtr.next;
+            }
+        }
+            return largest;
+    }
+    public LLnode get2ndNode(){
+        return get2ndNode(head);
+    }
+    private LLnode get2ndNode(LLnode h){
+        if(isEmpty() || head.next == null) {
+            System.out.println("Cannot find second node, list has less than one element.");
+            return null;
+        }
+        else return head.next;
+    }
+    public LLnode get2ndLastNode(){
+        return get2ndLastNode(head);
+    }
+    private LLnode get2ndLastNode(LLnode h){
+        if(isEmpty() || head.next == null) {
+            System.out.println("Cannot find second last node, list has less than one element.");
+            return null;
+        }
+        else {
+            while(h.next.next != null)
+                h = h.next;
+            return h;
+        }
+    }
+    public LLnode getFirst()
+    {
+        if(isEmpty())
+            return null;
+        return head;
+    }
+    public LLnode getLast()
+    {
+        if(isEmpty())
+            return null;
+        LLnode helpPtr = head;
+        while(helpPtr.next != null)
+            helpPtr = helpPtr.next;
+        return helpPtr;
+    }
+    public void even2odd2Even(){
+        even2odd2Even(head);
+    }
+    private void even2odd2Even(LLnode h){
+        if(isEmpty())
+            System.out.println("Error, An empty list.");
+        while(h != null){
+            if(h.id % 2 == 0)
+                h.id += 1;
+            else
+                h.id -= 1;
+            h = h.next;
+        }
+    }
 }

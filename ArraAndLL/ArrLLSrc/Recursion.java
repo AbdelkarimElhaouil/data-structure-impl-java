@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Recursion {
     public static int fac(int n) {
         if (n == 1)
@@ -136,6 +134,29 @@ public class Recursion {
             return "";
         if (s.charAt(0) == 'x')
             return NoX(s.substring(1));
-        return s.charAt(0) + s.substring(1);
+        return s.charAt(0) + NoX( s.substring(1));
+    }
+    public static String cleanString(String s){
+        if(s.length() == 1)
+            return s;
+        if(s.charAt(0) == s.charAt(1))
+            return cleanString(s.substring(1));
+        return s.charAt(0) + cleanString(s.substring(1));
+
+    }
+    public static int countHi(String s){
+        if(s.length() < 2) return 0;
+        if(s.startsWith("hi")) return 1 + countHi(s.substring(2));
+        if(s.startsWith("xhi")) return countHi(s.substring(3));
+        return countHi(s.substring(1));
+    }
+    public static int strdist(String str, String sub){
+        if(!str.contains(sub))
+            return 0;
+        if(str.startsWith(sub) && str.endsWith(sub))
+            return str.length();
+        if(!str.startsWith(sub))
+            return strdist(str.substring(1), sub);
+        return strdist(str.substring(0, str.length() - 1), sub);
     }
 }
