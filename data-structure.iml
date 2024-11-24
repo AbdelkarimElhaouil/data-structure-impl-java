@@ -7,8 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="ArraAndLL" />
-    <orderEntry type="module" module-name="BST" />
+    <orderEntry type="module" module-name="ArrayAndLinkedList" />
+    <orderEntry type="module" module-name="Binary-Search-Tree" />
     <orderEntry type="module" module-name="bstLab" />
     <orderEntry type="module" module-name="Queue" />
     <orderEntry type="module" module-name="Stacks" />

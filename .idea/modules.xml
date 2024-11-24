@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ArraAndLL/ArraAndLL.iml" filepath="$PROJECT_DIR$/ArraAndLL/ArraAndLL.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BST/BST.iml" filepath="$PROJECT_DIR$/BST/BST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArrayAndLinkedList/ArrayAndLinkedList.iml" filepath="$PROJECT_DIR$/ArrayAndLinkedList/ArrayAndLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Binary-Search-Tree/Binary-Search-Tree.iml" filepath="$PROJECT_DIR$/Binary-Search-Tree/Binary-Search-Tree.iml" />
       <module fileurl="file://$PROJECT_DIR$/Queue/Queue.iml" filepath="$PROJECT_DIR$/Queue/Queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stacks/Stacks.iml" filepath="$PROJECT_DIR$/Stacks/Stacks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BST/bstLab/bstLab.iml" filepath="$PROJECT_DIR$/BST/bstLab/bstLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Binary-Search-Tree/bstLab/bstLab.iml" filepath="$PROJECT_DIR$/Binary-Search-Tree/bstLab/bstLab.iml" />
       <module fileurl="file://$PROJECT_DIR$/data-structure.iml" filepath="$PROJECT_DIR$/data-structure.iml" />
     </modules>
   </component>
