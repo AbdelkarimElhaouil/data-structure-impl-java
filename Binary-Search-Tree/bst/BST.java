@@ -6,7 +6,9 @@ public class BST {
     }
 
     //Insertion
-    public void insert(int d){ root = insert(root, d);};
+    public void insert(int d){
+        root = insert(root, d);
+    }
     private intBTSNode insert(intBTSNode p, int d){
         if(p == null)
             p = new intBTSNode(d);
@@ -42,6 +44,19 @@ public class BST {
                 System.out.print(p.data + " ");
             printOddNodes(p.right);
             printOddNodes(p.left);
+        }
+    }
+
+    //Print Odd nodes in ascending order
+    public void printOddNodesAsc(){
+        printOddNodesAsc(root);
+    }
+    private void printOddNodesAsc(intBTSNode p){
+        if(p != null){
+            printOddNodesAsc(p.left);
+            if(p.data % 2 != 0)
+                System.out.print(p.data + " ");
+            printOddNodesAsc(p.right);
         }
     }
     //count nodes
@@ -139,7 +154,43 @@ public class BST {
         }
         return false;
     }
+    //compute the height of the tree
+    public int getHeight(){
+        return getHeight(root);
+    }
+    private int getHeight(intBTSNode p){
+        int left, right;
+        if(p == null)
+            return 0;
+        left = getHeight(p.left);
+        right = getHeight(p.right);
+        if(left > right)
+            return left + 1;
+        return right + 1;
+    }
 
+    //Find Largest
+    public intBTSNode findLargest(){
+        return findLargest(root);
+    }
+    private intBTSNode findLargest(intBTSNode p){
+        if(p == null)
+            return null;
+        if(p.right == null)
+            return p;
+        return findLargest(p.right);
+    }
+    //Count Nodes with one child
+    public int countSingleNodeChild(){
+        return countSingleNodeChild(root);
+    }
+    private int countSingleNodeChild(intBTSNode p){
+        if(p == null)
+            return 0;
+        if((p.right == null && p.left != null) || (p.left == null && p.right != null))
+            return 1 + countSingleNodeChild(p.right) + countSingleNodeChild(p.left);
+        return countSingleNodeChild(p.right) + countSingleNodeChild(p.left);
+    }
     // Traversal methods
     public void preOrder(intBTSNode p){
         if(p != null){

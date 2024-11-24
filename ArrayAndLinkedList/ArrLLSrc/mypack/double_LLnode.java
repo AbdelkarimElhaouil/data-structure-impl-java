@@ -1,3 +1,5 @@
+package mypack;
+
 public class double_LLnode {
     public String name;
     public double_LLnode next, prev;

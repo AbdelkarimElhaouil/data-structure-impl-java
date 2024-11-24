@@ -1,3 +1,5 @@
+package mypack;
+
 public class Recursion {
     public static int fac(int n) {
         if (n == 1)

@@ -1,3 +1,5 @@
+package mypack;
+
 public class LLnode {
     public int id; // data part
     public LLnode next; // Link part

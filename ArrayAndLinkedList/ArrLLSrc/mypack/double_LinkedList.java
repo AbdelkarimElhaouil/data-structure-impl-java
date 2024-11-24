@@ -1,3 +1,5 @@
+package mypack;
+
 public class double_LinkedList {
         private double_LLnode head;
         private int size = 0;

@@ -1,3 +1,5 @@
+package mypack;
+
 public class myLinkedList {
     private LLnode head, tail;
     private int size = 0;
